@@ -54,7 +54,7 @@
       <h1>{gameName}</h1>
       <h2>
         {#if statusMessage}{statusMessage}{:else}
-          Loading <span class="number">{progress.toFixed(2)}%</span>
+          Loading <span class="number">{(progress * 100).toFixed(2)}%</span>
           {#if initPhase}&ndash; {initPhase}{/if}
         {/if}
       </h2>

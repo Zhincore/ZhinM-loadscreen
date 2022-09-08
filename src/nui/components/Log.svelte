@@ -6,10 +6,7 @@
 
   let dones: string[] = [];
   let log: Message[] = [];
-  let counts: Record<string, number> = {
-    map: 0,
-  };
-  let mapLoads = 0;
+  let counts: Record<string, number> = {};
 
   const _addLog = (msg: Message) => {
     log = [msg, ...log.slice(0, logLimit - 1)];
@@ -17,15 +14,6 @@
 
   export async function addLog(msg: Message) {
     switch (msg.eventName) {
-      case "startDataFileEntries":
-        counts.map = msg.count;
-        break;
-
-      case "performMapLoadFunction":
-        msg.idx = ++mapLoads;
-        _addLog(msg);
-        break;
-
       case "startInitFunctionOrder":
         counts = { ...counts, [msg.type]: msg.count };
         break;
@@ -49,14 +37,10 @@
         <i>🚀</i> Loading <strong>{line.name}</strong>
       {:else if line.eventName == "initFunctionInvoking"}
         {#if dones.includes(line.name)}
-          <i>✔️</i> Invoked <strong>{line.name}</strong>
-          (<strong>{line.idx}</strong> / <strong>{counts[line.type] ?? 0}</strong>).
+          <i>✔️</i> Invoked <strong>{line.name}</strong>.
         {:else}
-          <i>⏳</i> Invoking <strong>{line.name}</strong>
-          (<strong>{line.idx}</strong> / <strong>{counts[line.type] ?? 0}</strong>)...
+          <i>⏳</i> Invoking <strong>{line.name}</strong>...
         {/if}
-      {:else if line.eventName == "performMapLoadFunction"}
-        <i>🗺️</i> Loaded <strong>{((line.idx / counts.map) * 100).toFixed(2)}</strong>
       {/if}
     </li>
   {/each}
