@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "$lib/*": ["./lib/*"]
+    },
+    "lib": ["es2021", "DOM"]
+  },
+  "include": ["global.d.ts", "./"]
+}

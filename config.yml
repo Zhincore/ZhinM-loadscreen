@@ -1,0 +1,44 @@
+background:
+  duration: 30000
+  durationRandom: 0.2
+  sources:
+    # vanilla loading screen
+    - https://images7.alphacoders.com/421/421642.jpg
+    - https://images7.alphacoders.com/421/421641.jpg
+    - https://images6.alphacoders.com/339/339737.jpg
+    - https://images5.alphacoders.com/519/519167.jpg
+    - https://images5.alphacoders.com/589/589030.jpg
+    # gtav screenshots
+    - https://wallpaperaccess.com/full/3551518.jpg
+    - https://wallpaperaccess.com/full/4903682.jpg
+    - https://images8.alphacoders.com/587/587534.jpg
+    - https://images6.alphacoders.com/553/553248.jpg
+    - https://images8.alphacoders.com/573/573739.jpg
+    - https://images7.alphacoders.com/587/587535.jpg
+    - https://images8.alphacoders.com/573/573740.jpg
+    - https://images7.alphacoders.com/853/853456.jpg # huge
+    # genshin
+    - https://static.zhincore.eu/Obsessions/Genshin/illust_86644511_20220820_113519.jpg
+    - https://static.zhincore.eu/Obsessions/Genshin/illust_86644511_20220820_113520.jpg
+    - https://static.zhincore.eu/Obsessions/Genshin/illust_86644511_20220820_113523.jpg
+
+image:
+  duration: 20000
+  durationRandom: 0.4
+  sources:
+    - https://cdn.discordapp.com/attachments/503279665012539392/531906467314401281/IMG_20181005_114840.jpg
+    - https://static.zhincore.eu/storage/a-hat-in-time-hat-kid.gif?file
+    - https://static.zhincore.eu/Obsessions/Genshin/96223096_p0.jpg?file
+    - https://static.zhincore.eu/Obsessions/Genshin/illust_98872522_20220820_110253.jpg?file
+    - https://static.zhincore.eu/Obsessions/Arcane/Jinx/FTBU_UdWAAAU7BJ.jpeg?file
+    - https://static.zhincore.eu/Memes/confused_milosh.gif?file
+    - https://static.zhincore.eu/Memes/stash/zajdovodoupe.png?file
+    - https://static.zhincore.eu/Memes/stash/zajdovodoupe.png?file
+    - https://static.zhincore.eu/Memes/stash/zajdovodoupe.png?file
+    - https://static.zhincore.eu/Memes/stash/zajdovodoupe.png?file
+    - https://static.zhincore.eu/Memes/stash/karelThonk.png?file
+    - https://static.zhincore.eu/Memes/stash/bastanice.jpg?file
+
+audio:
+  volume: 0.15
+  source: https://radio.zhincore.eu/tranquility
