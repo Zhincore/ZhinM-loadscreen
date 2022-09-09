@@ -9,6 +9,6 @@ export interface Config {
   image: ImageConfig;
   audio: {
     volume: number;
-    source: string;
+    source?: string;
   };
 }
