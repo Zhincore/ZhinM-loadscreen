@@ -64,7 +64,7 @@
 
 {#if handoverData.icon}
   <div class="server-icon">
-    <Image src="data:base64,image/png;{handoverData.icon}" />
+    <Image src="data:image/png;base64,{handoverData.icon}" />
   </div>
 {/if}
 
