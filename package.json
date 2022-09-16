@@ -6,12 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "watch": "concurrently \"npm:watch:nui\" \"npm:watch:fx\"",
-    "watch:nui": "vite build --watch",
-    "watch:fx": "node build.js",
-    "build": "concurrently \"npm:build:nui\" \"npm:build:fx\"",
-    "build:nui": "vite build",
-    "build:fx": "node build.js --mode=production"
+    "watch": "vite build --watch",
+    "build": "vite build"
   },
   "devDependencies": {
     "@citizenfx/client": "^2.0.5865-1",
