@@ -47,23 +47,23 @@
 </script>
 
 {#if config?.audio.source}
-  <audio bind:this="{audio}" autoplay loop src="{config.audio.source}"></audio>
+  <audio bind:this={audio} autoplay loop src={config.audio.source} />
 {/if}
 
 {#if config && !end}
-  <div class="background fullscreen" in:fade="{{ delay: 1000, duration: 1000 }}" out:fade="{{ duration: 1000 }}">
-    <SlideShow config="{config.background}" imgClass="background" />
+  <div class="background fullscreen" in:fade={{ delay: 1000, duration: 1000 }} out:fade={{ duration: 1000 }}>
+    <SlideShow config={config.background} imgClass="background" />
   </div>
 {/if}
 
 {#if config && !end}
-  <div in:fade="{{ duration: 1000 }}" out:fade="{{ delay: 2500, duration: 1000 }}" on:outroend="{onOutroEnd}">
-    <Panel config="{config}" gameName="{handoverData.serverName}" />
+  <div in:fade={{ duration: 1000 }} out:fade={{ delay: 2500, duration: 1000 }} on:outroend={onOutroEnd}>
+    <Panel {config} gameName={handoverData.serverName} />
   </div>
 {/if}
 
-{#if handoverData.icon}
-  <div class="server-icon">
+{#if handoverData.icon && !end}
+  <div class="server-icon" transition:fade={{ duration: 500, delay: 500 }}>
     <Image src="data:image/png;base64,{handoverData.icon}" />
   </div>
 {/if}

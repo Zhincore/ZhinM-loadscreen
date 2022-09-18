@@ -1,8 +1,8 @@
 {
-  "name": "zhin-loadscreen",
+  "name": "zhinm-loadscreen",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Zhincore",
+  "license": "GPLv3-or-later",
   "private": true,
   "scripts": {
     "dev": "vite",
